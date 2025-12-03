@@ -1,9 +1,4 @@
-@font-face {
-    font-family:"doid";
-    src: url("idroid.otf");
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 * {
     margin: 0;
@@ -21,17 +16,15 @@
 
 }
 
-
-
 body {
     background-color: var(--cor0);
     font-family:  Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-style: normal;
+    max-width:900px;
+    min-width: 320px;
+    margin:auto;
 }
-
-
-
 
 header {
     font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
@@ -44,30 +37,32 @@ header {
     text-align: center;
     padding: 35px;
 }
+
 header h1 {
     font-size: 2.5em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.52);
 }
+
 header p {
     font-size: 1.2em;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.52); 
-  
+ 
 }
+
 nav {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.371);
     background-color: var(--cor5);
     padding: 10px;
   
 }
+
 nav > a {
     color: var(--cor1);
     text-decoration: none; 
     margin: 0px;
     border-radius: 5px; 
     padding: 10px;
-
-   
     transition: background-color 0.5s, color 0.5s;
  
 }
@@ -80,17 +75,24 @@ nav a:hover {
 main {
     background-color:white;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.232);
+    border-radius: 10px;
     padding: 20px;
     max-width: 1000px;
     margin: auto;
-    margin-bottom: 10px;;
+    margin-bottom: 20px;
 }
 main h1 {
-    font-family: "doid", Arial, Helvetica, sans-serif;
+    color: var(--cor5);
+    font-family: 'doid' ,Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 main h2 {
-    font-family: doid, Arial, Helvetica, sans-serif;
+    font-family: 'doid',Arial, Helvetica, sans-serif;
+    background-color: var(--cor2);
+    background-image: linear-gradient(to right, var(--cor2),white);
+    color: var(--cor5);
+    font-weight: normal;
 }
 main p {
     text-align: justify;
@@ -98,11 +100,33 @@ main p {
     line-height: 1.5em;
     margin: 20px;
 }
-footer {
-    background-color: var(--cor4);
-    color:var(--cor2);
-    text-align: center;
+main a {
+    text-decoration: none;
+    background-color: var(--cor2);
+    padding: 0px 3px;
+
 }
+main a.externo::after{
+    content: '\1F517';  
+    padding-left: 4px;
+
+}
+main a:hover {
+    text-decoration: underline;
+}
+img {
+    padding-left: 20px;
+}
+
+img#bug {
+    
+    display: block;
+    margin: auto;
+    padding: 20px;
+    max-width: 80%;
+}
+
+
 aside > h3{
     background-color: var(--cor4);
     color: white;
@@ -111,20 +135,51 @@ aside > h3{
     padding: 5px 20px;
 }
 aside {
-    background-color: var(--cor3);
+    background-color: var(--cor2);
     border-radius: 10px;
     padding-bottom: 10px;
    
    
 }
 ul {
-    padding: 10px;
+    padding: 15px;
     list-style-position: inside;
     column-count: 2;
+    list-style: '\1F5F8\0020\0020';
+    margin-left: 15px;
 }
 
-main div {
-    margin: auto;
+div { 
     background-color: var(--cor4);
-    margin-bottom: 10px;
+    padding-bottom: 20%;
+    margin :0px -20px 30px -20px;
 }
+
+div > iframe {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 100%;
+    height: 100%
+}
+
+strong {
+color: var(--cor4);
+font-weight: bold;
+}
+
+
+footer {
+    height: 26px;
+    padding-top: 4px;
+    background-color: var(--cor4);
+    color:var(--cor2);
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color:white;
+
+}
+
+
